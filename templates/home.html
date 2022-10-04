@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form action="add_item/" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Add to Store</button>
+    </form>
+    <form action="del_item/" method="post" hidden></form>
+    <form action="edit_item/" method="post" hidden></form>
+    <table>
+        <thead>
+            <tr>
+                <th class="addCell"></th>
+                <th class="itemCell">Item</th>
+                <th>Brand</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Price Type</th>
+                <th>Servings</th>
+                <th class="deleteCell"></th>
+                <th class="editCell"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in items %}
+            <tr class="itemRow">
+                <td class="addCell">
+                    <button type="submit">Add</button>
+                </td>
+                <td class="itemCell">{{i.item}}</td>
+                <td>{{i.brand}}</td>
+                <td>{{i.location}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.price_type}}</td>
+                <td>{{i.servings}}</td>
+                <td class="deleteCell">
+                    <button type="submit">Delete</button>
+                </td>
+                <td class="editCell">
+                    <button type="submit">Edit</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

@@ -1,0 +1,146 @@
+/********** General **********/
+@media screen and (min-width: 0px) {
+
+    /* Variables */
+    :root {
+        --font-family: "Roboto", sans-serif;
+        --color-one: hsl(240, 0%, 95%);
+        --color-two: hsl(240, 0%, 75%);
+        --color-three: hsl(240, 0%, 55%);
+        --color-four: hsl(240, 0%, 35%);
+        --color-five: hsl(240, 0%, 15%);
+        --primary-color: hsl(240, 55%, 55%);
+        --delete-button: hsl(0, 55%, 55%);
+        --highlight: hsl(30, 95%, 55%);
+    }
+
+    /* CSS Resets */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-family);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-one);
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: var(--color-one);
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 60px;
+
+    }
+
+    h3 {
+        font-size: 48px;
+    }
+
+    h4 {
+        font-size: 36px;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    h6 {
+        font-size: 24px;
+    }
+
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 0px) {
+    .container {
+        border-radius: 5px;
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+        background-color: var(--color-two);
+        box-shadow: 5px 5px 5px var(--color-three);
+    }
+    
+    form {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: var(--primary-color);
+    }
+    
+    input, button {
+        border-radius: 5px;
+        height: 25px
+    }
+    
+    button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    tr {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-one);
+        transition: all .2s ease-in-out
+    }
+
+    .itemRow:hover {
+        transform: scale(1.03);
+        background-color: var(--highlight);
+        color: var(--color-one)
+    }
+    
+    td, th {
+        border: 1px solid red;
+        width: 11%;
+        display: inline-flex;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .addCell, .deleteCell, .editCell  {
+        justify-content: center;
+    }
+    
+    .itemCell {
+        width: 30%;
+    }
+}
